@@ -103,12 +103,5 @@ public class FontConverter {
         System.out.println(output);
     }
 
-    private static String convertText(String text, Map<Character, Character> fontMap) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            result.append(fontMap.getOrDefault(c, c));
-        }
-        return result.toString();
-    }
+
 }
