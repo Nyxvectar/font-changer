@@ -104,6 +104,7 @@ public class FontConverter {
     }
 
     private static String convertText(String text, Map<Character, Character> fontMap) {
+        StringBuilder result = new StringBuilder();
 
     }
 }
