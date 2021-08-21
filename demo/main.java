@@ -60,6 +60,50 @@ public class FontConverter {
     }
 
     public static void main(String[] args) {
-        println("Hello")
+
+        Map<Character, Character> fontMap = charMap;
+        String[] inputArgs = args;
+
+        if (inputArgs.length > 0 && (inputArgs[0].equals("-font1") ||
+            inputArgs[0].equals("-font2") || inputArgs[0].equals("-font3"))) {
+
+            switch (inputArgs[0]) {
+                case "-font2":
+                    fontMap = charMap2;
+                    break;
+                case "-font3":
+                    fontMap = charMap3;
+                    break;
+            }
+
+            inputArgs = new String[inputArgs.length - 1];
+            System.arraycopy(args, 1, inputArgs, 0, inputArgs.length);
+        }
+
+        if (inputArgs.length == 0) {
+            System.out.println("Please provide text to convert after the font argument");
+            return;
+        }
+
+        StringBuilder inputBuilder = new StringBuilder();
+        for (int i = 0; i < inputArgs.length; i++) {
+            if (i > 0) {
+                inputBuilder.append(" ");
+            }
+            inputBuilder.append(inputArgs[i]);
+        }
+        String input = inputBuilder.toString();
+
+        String output = convertText(input, fontMap);
+        System.out.println(output);
+    }
+
+    private static String convertText(String text, Map<Character, Character> fontMap) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            result.append(fontMap.getOrDefault(c, c));
+        }
+        return result.toString();
     }
 }
