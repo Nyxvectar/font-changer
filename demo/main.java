@@ -41,7 +41,23 @@ public class FontConverter {
         charMap2.put('C', '𝒞'); charMap2.put('D', '𝐷'); charMap2.put('V', '𝒱'); charMap2.put('Z', '𝒵');
         charMap2.put('K', '𝐾'); charMap2.put('H', '𝐻');
 
-}
+        charMap3 = new HashMap<>();
+        charMap3.put('q', 'ʠ'); charMap3.put('w', 'ѡ'); charMap3.put('f', 'բ'); charMap3.put('p', 'ք');
+        charMap3.put('b', 'Ⴆ'); charMap3.put('j', 'ϳ'); charMap3.put('l', 'Լ'); charMap3.put('u', 'մ');
+        charMap3.put('y', 'γ'); charMap3.put('a', 'α'); charMap3.put('r', 'ɼ'); charMap3.put('s', 'ʂ');
+        charMap3.put('t', 'τ'); charMap3.put('g', 'ց'); charMap3.put('m', 'ɱ'); charMap3.put('n', 'ռ');
+        charMap3.put('e', 'ҽ'); charMap3.put('i', 'ɨ'); charMap3.put('o', 'օ'); charMap3.put('x', '×');
+        charMap3.put('c', '¢'); charMap3.put('d', 'ď'); charMap3.put('v', 'ν'); charMap3.put('z', 'ƶ');
+        charMap3.put('k', 'κ'); charMap3.put('h', 'ɦ');
+
+        charMap3.put('Q', 'Ⴍ'); charMap3.put('W', 'Ѡ'); charMap3.put('F', 'Ḟ'); charMap3.put('P', 'Ρ');
+        charMap3.put('B', 'Β'); charMap3.put('J', 'Ј'); charMap3.put('L', 'Ł'); charMap3.put('U', 'Ц');
+        charMap3.put('Y', 'Υ'); charMap3.put('A', 'Α'); charMap3.put('R', 'Ṙ'); charMap3.put('S', 'Ѕ');
+        charMap3.put('T', 'Τ'); charMap3.put('G', 'Ġ'); charMap3.put('M', 'Μ'); charMap3.put('N', 'Ν');
+        charMap3.put('E', 'Ε'); charMap3.put('I', 'Ι'); charMap3.put('O', 'Ο'); charMap3.put('X', 'Χ');
+        charMap3.put('C', 'Č'); charMap3.put('D', 'Đ'); charMap3.put('V', 'Ṽ'); charMap3.put('Z', 'Ζ');
+        charMap3.put('K', 'Κ'); charMap3.put('H', 'Η');
+    }
 
     public static void main(String[] args) {
         if (args.length < 1) {
