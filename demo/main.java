@@ -60,6 +60,11 @@ public class FontConverter {
     }
 
     public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Please Provide the Command with Args [string]");
+            System.out.println("可选参数: -font1 (默认) 或 -font2 或 -font3 来选择字体");
+            return;
+        }
 
         Map<Character, Character> fontMap = charMap;
         String[] inputArgs = args;
