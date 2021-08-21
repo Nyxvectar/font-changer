@@ -103,5 +103,7 @@ public class FontConverter {
         System.out.println(output);
     }
 
+    private static String convertText(String text, Map<Character, Character> fontMap) {
 
+    }
 }
