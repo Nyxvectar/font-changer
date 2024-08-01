@@ -24,6 +24,12 @@ var charMap2 = map[rune]rune{
 	'X': '𝒳', 'C': '𝒞', 'D': '𝐷', 'V': '𝒱', 'Z': '𝒵', 'K': '𝐾', 'H': '𝐻',
 }
 
+/*
+此文件简单实现了字体转换
+也是鄙人时常用到的特殊字
+体的来源。
+*/
+
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Please Provide the Command with Args [string]")
