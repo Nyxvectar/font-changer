@@ -24,6 +24,15 @@ var charMap2 = map[rune]rune{
 	'X': '𝒳', 'C': '𝒞', 'D': '𝐷', 'V': '𝒱', 'Z': '𝒵', 'K': '𝐾', 'H': '𝐻',
 }
 
+var charMap3 = map[rune]rune{
+	'q': 'ʠ', 'w': 'ѡ', 'f': 'բ', 'p': 'ք', 'b': 'Ⴆ', 'j': 'ϳ', 'l': 'Լ', 'u': 'մ', 'y': 'γ',
+	'a': 'α', 'r': 'ɼ', 's': 'ʂ', 't': 'τ', 'g': 'ց', 'm': 'ɱ', 'n': 'ռ', 'e': 'ҽ', 'i': 'ɨ', 'o': 'օ',
+	'x': '×', 'c': '¢', 'd': 'ď', 'v': 'ν', 'z': 'ƶ', 'k': 'κ', 'h': 'ɦ',
+	'Q': 'Ⴍ', 'W': 'Ѡ', 'F': 'Ḟ', 'P': 'Ρ', 'B': 'Β', 'J': 'Ј', 'L': 'Ł', 'U': 'Ц', 'Y': 'Υ',
+	'A': 'Α', 'R': 'Ṙ', 'S': 'Ѕ', 'T': 'Τ', 'G': 'Ġ', 'M': 'Μ', 'N': 'Ν', 'E': 'Ε', 'I': 'Ι', 'O': 'Ο',
+	'X': 'Χ', 'C': 'Č', 'D': 'Đ', 'V': 'Ṽ', 'Z': 'Ζ', 'K': 'Κ', 'H': 'Η',
+}
+
 /*
 此文件简单实现了字体转换
 也是鄙人时常用到的特殊字
@@ -33,16 +42,19 @@ var charMap2 = map[rune]rune{
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Please Provide the Command with Args [string]")
-		fmt.Println("可选参数: -font1 (默认) 或 -font2 来选择字体")
+		fmt.Println("可选参数: -font1 (默认) 或 -font2 或 -font3 来选择字体")
 		return
 	}
 
 	fontMap := charMap
 	inputArgs := os.Args[1:]
 
-	if len(inputArgs) > 0 && (inputArgs[0] == "-font1" || inputArgs[0] == "-font2") {
-		if inputArgs[0] == "-font2" {
+	if len(inputArgs) > 0 && (inputArgs[0] == "-font1" || inputArgs[0] == "-font2" || inputArgs[0] == "-font3") {
+		switch inputArgs[0] {
+		case "-font2":
 			fontMap = charMap2
+		case "-font3":
+			fontMap = charMap3
 		}
 		inputArgs = inputArgs[1:]
 	}
